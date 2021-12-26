@@ -3,14 +3,14 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://goitacademy.github.io/Arbitrazh.git",
+  "homepage": "https://codajoker.github.io/Arbitrazh",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Arbitrazh/"
+    "build": "parcel build src/*.html --public-url /Arbitrazh.git/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/Arbitrazh.git"
+    "url": "git+https://github.com/codajoker/Arbitrazh.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
