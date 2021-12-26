@@ -1,0 +1,13 @@
+.container {
+  z-index: 10;
+  margin: 0 auto;
+  padding: 15px;
+  position: relative;
+
+  @include min-width('medium') {
+    width: 640px;
+  }
+  @include min-width('large') {
+    width: 1180px;
+  }
+}
