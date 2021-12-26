@@ -6,7 +6,7 @@
   "homepage": "https://codajoker.github.io/Arbitrazh",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Arbitrazh.git/"
+    "build": "parcel build src/*.html --public-url /Arbitrazh/"
   },
   "repository": {
     "type": "git",
