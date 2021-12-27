@@ -19,40 +19,34 @@
         <div class="hero_background"></div>
         <div class="container hero_container">
           <div class="hero_description">
+            <i class="fas fa-money-bill hero_money"></i>
+
             <h1 class="hero_title">Получай деньги за регистрацию на сайтах</h1>
             <p class="hero_text">
               Регистрируйся на сайтах и забирай деньги выплата моментально на карту так же
               присутствует акция приведи друга
             </p>
-            <button class="hero_button hero_button-teleg">
+            <a class="hero_button hero_button-teleg" href="https://t.me/register_account">
               <i class="fab fa-telegram-plane"></i>
-              <a href="https://t.me/register_account">Перейти зарабатывать</a>
-            </button>
+
+              Перейти зарабатывать</a
+            >
           </div>
           <div class="hero_video">
             <img
+              data-modal-open
               class="hero_video-icon"
               width="100px"
               height="100px"
               src="https://cdn-icons-png.flaticon.com/512/149/149125.png"
               alt="1"
             />
-            <iframe
-              class="visually-hidden"
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/SFgHnxEuXBE"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
           </div>
         </div>
       </section>
       <section class="benefits">
         <div class="benefits_background"></div>
-        <div class="container">
+        <div class="container benefits_container">
           <h1 class="benefits_title">Наши преимущества</h1>
           <ul class="benefits_list list">
             <li class="benefits_item">
@@ -67,10 +61,12 @@
                   тем больше мы платим вам. У нас более 15 сайтов
                 </p>
               </div>
-              <button class="hero_button hero_button-teleg">
-                <i class="fab fa-telegram-plane"></i>
-                <a href="https://t.me/register_account">Перейти зарабатывать</a>
-              </button>
+              <a
+                class="hero_button hero_button-teleg benefits_button"
+                href="https://t.me/register_account"
+              >
+                <i class="fab fa-telegram-plane"></i> Перейти зарабатывать</a
+              >
             </li>
             <li class="benefits_item">
               <div class="benefits_icon-2">
@@ -84,10 +80,12 @@
                   2 минут мы переводим вам на карту деньги . 1 сайт 1 выплата.
                 </p>
               </div>
-              <button class="hero_button hero_button-teleg">
-                <i class="fab fa-telegram-plane"></i>
-                <a href="https://t.me/register_account">Перейти зарабатывать</a>
-              </button>
+              <a
+                class="hero_button hero_button-teleg benefits_button"
+                href="https://t.me/register_account"
+              >
+                <i class="fab fa-telegram-plane"></i> Перейти зарабатывать</a
+              >
             </li>
             <li class="benefits_item">
               <div class="benefits_icon-3">
@@ -101,16 +99,18 @@
                   каждого друга который пройдет регистрацию на 1 сайте ты получишь 100грн
                 </p>
               </div>
-              <button class="hero_button hero_button-teleg">
-                <i class="fab fa-telegram-plane"></i>
-                <a href="https://t.me/register_account">Перейти зарабатывать</a>
-              </button>
+              <a
+                class="hero_button hero_button-teleg benefits_button"
+                href="https://t.me/register_account"
+              >
+                <i class="fab fa-telegram-plane"></i> Перейти зарабатывать</a
+              >
             </li>
           </ul>
         </div>
       </section>
       <section class="description">
-        <div class="container">
+        <div class="container description_container">
           <div class="description_text">
             <i class="fas fa-quote-rightfas fa-quote-rightfas fa-quote-right"></i>
             <p class="description_about">
@@ -118,19 +118,45 @@
               ullam. Ut adipisci libero praesentium nostrum cumque! Mollitia velit quae qui delectus
               a, nesciunt quidem minima dignissimos? Sequi.
             </p>
-            <h2 class="description_title"></h2>
-            <button class="description_button"></button>
+            <h2 class="description_title">NEMI</h2>
+            <p class="description_recomend">Lorem ipsum dolor sit amet.</p>
+            <a class="description_button"></a>
           </div>
+          <img
+            src="https://ua-card.com/wp-content/uploads/2020/11/businessman_PNG6557.png"
+            alt="123"
+            class="description_image"
+          />
         </div>
-        <img
-          src="https://ua-card.com/wp-content/uploads/2020/11/businessman_PNG6557.png"
-          alt="123"
-          class="description_image"
-        />
       </section>
-      <section class="section section-4"></section>
+      <section class="telegram">
+        <div class="container">
+          <h2 class="telegram_title">Перейти зарабатывать</h2>
+          <p class="telegram_description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit recusandae
+            ducimus tempore dicta minus facere quo!
+          </p>
+          <a
+            class="hero_button hero_button-teleg telegram_button"
+            href="https://t.me/register_account"
+          >
+            <i class="fab fa-telegram-plane"></i>@NEMI</a
+          >
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <!--  MODAl-->
+    <div class="backdrop is-hidden" data-modal>
+      <button class="close_btn" data-modal-close><i class="far fa-times-circle"></i></button>
+      <iframe
+        class="modal"
+        src="https://www.youtube.com/embed/SFgHnxEuXBE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
     <script src="https://kit.fontawesome.com/9ace7ccb09.js" crossorigin="anonymous"></script>

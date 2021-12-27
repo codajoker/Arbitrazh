@@ -104,15 +104,43 @@ button {
     background-color: rgba(37, 229, 247, 0);
     background-image: url('http://www.ua-card.com/wp-content/uploads/2020/11/hero-mask-envato-kit0129-CC0.png');
     background-position: bottom center;
-    background-size: cover;
     opacity: 1;
-  }
 
-  &_title {
-    margin-top: 40px;
+    @include min-width(medium) {
+      background-size: cover;
+    }
+  }
+  &_container {
+    @include min-width(medium) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    @include min-width(large) {
+      flex-direction: row;
+    }
+  }
+  &_description {
     text-align: center;
-    color: white;
+
+    @include min-width(medium) {
+      margin-left: 90px;
+    }
+    @include min-width(large) {
+      width: 50%;
+    }
+  }
+  &_money {
+    color: #68c600 !important;
+  }
+  &_title {
+    padding-top: 80px;
+    text-align: center;
+    color: #e2e2e2;
     font-size: 41px;
+    @include min-width(medium) {
+      text-align: left;
+    }
   }
   &_text {
     margin-top: 30px;
@@ -121,8 +149,13 @@ button {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7em;
+    @include min-width(medium) {
+      text-align: left;
+    }
   }
   &_button {
+    text-align: center;
+    display: block;
     margin-top: 50px;
     width: 100%;
     font-size: 16px;
@@ -131,15 +164,18 @@ button {
     letter-spacing: 0.6px;
     fill: #ffffff;
     color: #ffffff;
-    background-color: #9d00ff;
+    background-color: #00aef8;
     border-style: solid;
     border-width: 2px 2px 2px 2px;
-    border-color: #9d00ff;
+    border-color: #00aef8;
     border-radius: 30px 30px 30px 30px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+
+    @include min-width(medium) {
+      width: 300px;
+    }
   }
   &_video {
+    cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -167,7 +203,9 @@ button {
   height: auto;
   background-color: transparent;
   background-image: linear-gradient(360deg, #9d00ff 0%, #5901a0 69%);
-
+  &_container {
+    padding-top: 80px;
+  }
   &_background {
     position: absolute;
     width: 100%;
@@ -180,16 +218,24 @@ button {
   }
   &_title {
     color: white;
-    margin-top: 100px;
+    margin-top: 130px;
     margin-bottom: 70px;
     text-align: center;
     font-size: 33px;
+    @include min-width(medium) {
+      text-align: left;
+    }
   }
   &_list {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    @include min-width(medium) {
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+    }
   }
   &_item {
     margin-bottom: 20px;
@@ -199,21 +245,41 @@ button {
     padding-bottom: 30px;
     :last-child {
       margin-bottom: 0px;
+      @include min-width(medium) {
+        max-width: none;
+        margin-right: 0;
+      }
+    }
+    @include min-width(medium) {
+      margin-right: 20px;
+      width: 33%;
     }
   }
+  &_button {
+    width: 100%;
+  }
   &_icon-1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     position: relative;
     background-color: #68c600;
     border-radius: 7px;
     text-align: center;
   }
   &_icon-2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     position: relative;
     background-color: #ffbe00;
     border-radius: 7px;
     text-align: center;
   }
   &_icon-3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     position: relative;
     background-color: #ff267e;
     border-radius: 7px;
@@ -232,6 +298,8 @@ button {
     position: relative;
     padding: 20px;
     text-align: center;
+    min-height: 200px;
+
     ::before {
       content: '';
       position: absolute;
@@ -255,7 +323,15 @@ button {
 }
 .description {
   padding-top: 100px;
-  height: 400px;
+
+  &_container {
+    @include min-width(medium) {
+      display: flex;
+
+      min-width: 50% !important;
+      max-width: 1200px;
+    }
+  }
   &_image {
     display: block;
     width: 80%;
@@ -266,6 +342,56 @@ button {
     font-style: oblique;
     line-height: 1.6em;
     letter-spacing: 0.2px;
+  }
+  &_title {
+    margin-top: 40px;
+    text-align: center;
+    color: #7a7a7a;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    @include min-width(medium) {
+      text-align: left;
+    }
+  }
+  &_recomend {
+    margin-top: 30px;
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 0.3px;
+    @include min-width(medium) {
+      text-align: left;
+    }
+  }
+}
+.telegram {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+  background-image: linear-gradient(220deg, #9d00ff 0%, #49027c 65%);
+  &_title {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 41px;
+    margin-bottom: 30px;
+  }
+  &_description {
+    color: #e2e2e2;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7em;
+    text-align: center;
+  }
+  &_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
   }
 }
 .description > img {
@@ -285,4 +411,46 @@ button {
   color: white;
   font-size: 112px;
   z-index: 10;
+}
+button {
+  cursor: pointer;
+}
+a {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.backdrop {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+.modal {
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  display: none;
+}
+.close_btn {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  font-size: 34px;
 }
